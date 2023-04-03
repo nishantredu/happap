@@ -22,6 +22,9 @@
     --small-font-size:.90rem;
 }
 
+main{
+    height: 100%;
+}
 @media screen and (min-width:768px) {
     :root{
         --body-font:'Open Sans', sans-serif;
@@ -59,13 +62,7 @@ body{
     color:var(--dark-color);
     line-height: 1.6;
     height: 100%;
-    /* background: url('12.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; */
+    
 }
 h1,h2,p{
     margin: 0;
@@ -105,6 +102,55 @@ img{
     align-items: center;
 }
 
+.testimonyContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.testimonyWrapper{
+    border:1px solid #DEE4EA;
+    border-radius:5%;
+    margin-bottom: 3%;
+}
+
+.testimonyHeading{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+video{
+    width: 352px;
+}
+
+/* .testimonyVideo{
+    width: 100%;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.testimonyVideo video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+  
+.testimonyVideo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
 @media screen and (max-width:768px) {
     .nav__menu{
         position: fixed;
@@ -137,7 +183,22 @@ img{
         font-weight: 20;
     }
 
-    
+    .testimonyContainer{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .testimonyWrapper{
+        width: 100%;
+    }
+
+    video{
+        width:100%;
+    }
+
 }
 
 .cardsContainer{
@@ -168,7 +229,7 @@ img{
 }
 
 .cardSubHeading{
-    padding-top:120%;
+    padding-top:10%;
     padding-left:15px;
     color:#766584;
     font-size: 15px;
@@ -220,13 +281,13 @@ img{
 /* Face Container */
 #face-container{
     height: 100%;
-        background: url('12.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+    background: url('11th.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .face-text{
@@ -306,6 +367,23 @@ img{
     margin-top: 5%;
 }
 
+.serviceFocusContent{
+    display: flex;
+    flex-direction: row;
+}
+
+.serviveFocusHeading{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .serviceImg{
     width: 100%;
     height: 400px;
@@ -314,7 +392,11 @@ img{
 
 .serviceImgWrap{
     width: 50%;
-    height: 200px;
+    padding:3%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
 }  
 
 .serviceDesc{
@@ -324,6 +406,13 @@ img{
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
+    padding:3%;
+    padding-right: 0px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 40px;
+    font-weight: 900;
+    margin-right: 10%;
+    box-sizing: border-box;
 }
 .contactUsIcon{
     font-size: 40px;
@@ -362,14 +451,16 @@ img{
 
 @media screen and (max-width:600px){
     #face-container{
-        height:100%;
+        background-size: 130% 100%;
+        height:40%;
     }
     .face-text{
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-size: 40px;
+        font-size: 30px;
         padding-bottom: 40%;
+        padding-top: 0;
     }
     .faceHeading{
         font-family: 'Tilt Warp', cursive;
@@ -380,8 +471,9 @@ img{
     .faceDesc{
         font-family: 'Montserrat', sans-serif;
         color: #f2f2f2;
-        font-size: 20px;
-        font-weight: 20;
+        font-size: 15px;
+        font-weight: 1000;
+        padding-top: 35%;
     }
 
     .descContainer{
@@ -414,6 +506,10 @@ img{
     .serviceFocusWrapper{
         flex-direction: column;
     }
+
+    .serviceFocusContent{
+        flex-direction: column;
+    }
     .serviceDesc{
         width: 100%;
     }
@@ -425,6 +521,10 @@ img{
     .footer{
         margin-left: 20%;
         margin-right: 20%;
+    }
+
+    .serviceImgWrap{
+        width: 100%;
     }
     
 }
@@ -570,7 +670,7 @@ img{
     }
 
     .face-text{
-        padding-top: 500px;
+        padding-top: 90px;
     }
 
 }
